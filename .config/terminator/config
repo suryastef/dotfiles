@@ -1,0 +1,70 @@
+[global_config]
+  borderless = True
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  tab_position = bottom
+  title_font = Source Code Pro Medium 9
+  title_hide_sizetext = True
+  title_receive_bg_color = "#ef2929"
+  title_transmit_bg_color = "#729fcf"
+  title_transmit_fg_color = "#000000"
+  title_use_system_font = False
+  window_state = maximise
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = ebf71363-adde-4055-a22e-8e2c15890194
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 654, 452
+      title = suryastef@fstx:~
+      type = Window
+    [[[terminal1]]]
+      command = ""
+      order = 0
+      parent = child0
+      profile = custom
+      type = Terminal
+      uuid = ebf71363-adde-4055-a22e-8e2c15890194
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    font = Source Code Pro 9
+    foreground_color = "#ebdbb2"
+    scrollback_infinite = True
+    use_system_font = False
+    use_theme_colors = True
+  [[custom]]
+    background_color = "#151719"
+    background_darkness = 0.85
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    font = Source Code Pro Medium 9
+    foreground_color = "#ebdbb2"
+    icon_bell = False
+    scrollback_infinite = True
+    urgent_bell = True
+    use_system_font = False
+    visible_bell = True
+  [[gns3]]
+    background_color = "#002b36"
+    background_darkness = 0.85
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    font = Source Code Pro Medium 9
+    foreground_color = "#729fcf"
+    icon_bell = False
+    scrollback_infinite = True
+    urgent_bell = True
+    use_system_font = False
+    visible_bell = True
