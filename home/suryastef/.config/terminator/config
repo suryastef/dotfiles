@@ -1,5 +1,4 @@
 [global_config]
-  borderless = True
   homogeneous_tabbar = False
   scroll_tabbar = True
   tab_position = bottom
@@ -35,20 +34,11 @@
 [profiles]
   [[default]]
     background_color = "#282828"
-    copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    font = Source Code Pro 9
-    foreground_color = "#ebdbb2"
-    scrollback_infinite = True
-    use_system_font = False
-    use_theme_colors = True
-  [[custom]]
-    background_color = "#151719"
     background_darkness = 0.85
     background_type = transparent
     copy_on_selection = True
     cursor_color = "#aaaaaa"
-    font = Source Code Pro Medium 9
+    font = Source Code Pro for Powerline 9
     foreground_color = "#ebdbb2"
     icon_bell = False
     scrollback_infinite = True
@@ -56,15 +46,4 @@
     use_system_font = False
     visible_bell = True
   [[gns3]]
-    background_color = "#002b36"
-    background_darkness = 0.85
-    background_type = transparent
-    copy_on_selection = True
     cursor_color = "#aaaaaa"
-    font = Source Code Pro Medium 9
-    foreground_color = "#729fcf"
-    icon_bell = False
-    scrollback_infinite = True
-    urgent_bell = True
-    use_system_font = False
-    visible_bell = True
