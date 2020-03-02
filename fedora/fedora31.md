@@ -76,7 +76,13 @@ dnf install -y vim # terminal text editor
 dnf install -y persepolis # download manager
 dnf install -y ghostwriter # markdown editor
 dnf install -y pluma # text editor
-dnf install -y gparted # partition editor
+dnf install -y gparted gnome-disk-utility # partition editor
+dnf install -y xfce4-power-manager # power manager and brightness shortcut enable
+dnf install -y pinta # MS. Paint like picture editor
+dnf install -y lxhotkey # hotkey manager
+dnf install -y blueman # bluetooth manager
+dnf install -y gnome-screenshot # screenshot manager
+dnf install -y telegram-desktop # telegram messanger
 ```
 
 ## Install VScodium
