@@ -1,0 +1,12 @@
+{
+    "explorer.confirmDelete": true,
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.fontFamily": "Meslo LG S for Powerline",
+    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.lineHeight":1,
+    "editor.tabSize": 2,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "Monospace",
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "left"
+}
