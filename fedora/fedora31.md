@@ -30,6 +30,13 @@ dnf install -y zsh
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+# Add mkcd command
+cat >> ~/.zshrc << EOF
+mkcd() {
+    mkdir -p -- "\$1" && cd -P -- "\$1"
+}
+EOF
+
 # Install plugin zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
