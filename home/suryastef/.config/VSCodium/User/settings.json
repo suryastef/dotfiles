@@ -8,5 +8,8 @@
     "editor.fontSize": 13,
     "editor.fontFamily": "Monospace",
     "workbench.statusBar.visible": true,
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "window.menuBarVisibility": "default",
+    "window.titleBarStyle": "custom"
 }
