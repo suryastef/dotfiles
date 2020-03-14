@@ -90,6 +90,7 @@ dnf install -y lxhotkey # hotkey manager
 dnf install -y blueman # bluetooth manager
 dnf install -y gnome-screenshot # screenshot manager
 dnf install -y telegram-desktop # telegram messanger
+dnf install -y redshift-gtk # comfort screen color during night
 ```
 
 ## Install VScodium
