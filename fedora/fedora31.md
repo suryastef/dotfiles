@@ -3,29 +3,29 @@
 ## Essential
 
 ```
-echo "fastestmirror=true" >> /etc/dnf/dnf.conf
-dnf update -y kernel && reboot
-dnf autoremove -y clipit # caused error on cliptboard
-dnf autoremove -y dnfdragora # not needed
-dnf autoremove -y leafpad # not needed
-dnf autoremove -y xpad # not needed
-dnf autoremove -y midori # not needed
-dnf autoremove -y xpad # not needed
-dnf autoremove -y sylpheed # not needed
+sudo echo "fastestmirror=true" >> /etc/dnf/dnf.conf
+sudo dnf update -y kernel && reboot
+sudo dnf autoremove -y clipit # caused error on cliptboard
+sudo dnf autoremove -y dnfdragora # not needed
+sudo dnf autoremove -y leafpad # not needed
+sudo dnf autoremove -y xpad # not needed
+sudo dnf autoremove -y midori # not needed
+sudo dnf autoremove -y xpad # not needed
+sudo dnf autoremove -y sylpheed # not needed
 ```
 
 ## Custom Repositories
 
 ```
 # RPMFusion
-dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
 ## Install ZSH, Oh-my-zsh, Powerlevel10k theme
 
 ```
 # Install zsh
-dnf install -y zsh
+sudo dnf install -y zsh
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -60,7 +60,7 @@ p10k configure
 ## Install Lightdm
 
 ```
-dnf install -y lightdm numlockx slick-greeter lightdm-gtk-greeter-settings
+sudo dnf install -y lightdm numlockx slick-greeter lightdm-gtk-greeter-settings
 ln -sf /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
 mv /usr/share/xsessions/openbox.desktop ~/
 ```
@@ -70,27 +70,28 @@ mv /usr/share/xsessions/openbox.desktop ~/
 Fedora 31 uses cgroup v2 which is not supported by docker
 
 ```
-dnf install -y podman
+sudo dnf install -y podman
 ```
 
 ## Install Various App
 
 ```
-dnf install -y terminator # another terminal emulator
-dnf install -y remmina # best remote desktop client
-dnf install -y compton # enable transparancy
-dnf install -y vim # terminal text editor
-dnf install -y persepolis # download manager
-dnf install -y ghostwriter # markdown editor
-dnf install -y pluma # text editor
-dnf install -y gparted gnome-disk-utility # partition editor
-dnf install -y xfce4-power-manager # power manager and brightness shortcut enable
-dnf install -y pinta # MS. Paint like picture editor
-dnf install -y lxhotkey # hotkey manager
-dnf install -y blueman # bluetooth manager
-dnf install -y gnome-screenshot # screenshot manager
-dnf install -y telegram-desktop # telegram messanger
-dnf install -y redshift-gtk # comfort screen color during night
+sudo dnf install -y terminator # another terminal emulator
+sudo dnf install -y remmina # best remote desktop client
+sudo dnf install -y compton # enable transparancy
+sudo dnf install -y vim # terminal text editor
+sudo dnf install -y persepolis # download manager
+sudo dnf install -y ghostwriter # markdown editor
+sudo dnf install -y pluma # text editor
+sudo dnf install -y gparted gnome-disk-utility # partition editor
+sudo dnf install -y xfce4-power-manager # power manager and brightness shortcut enable
+sudo dnf install -y pinta # MS. Paint like picture editor
+sudo dnf install -y lxhotkey # hotkey manager
+sudo dnf install -y blueman # bluetooth manager
+sudo dnf install -y gnome-screenshot # screenshot manager
+sudo dnf install -y telegram-desktop # telegram messanger
+sudo dnf install -y redshift-gtk # comfort screen color during night
+sudo dnf install -y gvfs-smb # smb client for pcmanfm
 ```
 
 ## Install VScodium
@@ -108,7 +109,7 @@ repo_gpgcheck=1
 gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 EOF
 
-dnf install -y codium
+sudo dnf install -y codium
 ```
 
 ## Install Chromium
@@ -116,21 +117,28 @@ dnf install -y codium
 Make sure RPMFusion repositories (free and non-free) are installed
 
 ```
-dnf install -y chromium-freeworld
+sudo dnf install -y chromium-freeworld
 ```
 
 ## Install PlayonLinux
 
 ```
-dnf config-manager --add-repo http://rpm.playonlinux.com/playonlinux.repo
+sudo dnf config-manager --add-repo http://rpm.playonlinux.com/playonlinux.repo
 curl http://rpm.playonlinux.com/public.gpg | gpg --import
-dnf install playonlinux
+sudo dnf install -y playonlinux jq
 ```
 
 ## Install VirtualBox
 
 ```
-dnf config-manager --add-repo http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
-dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms qt5-qtx11extras libxkbcommon
-dnf install VirtualBox-6.1
+sudo dnf config-manager --add-repo http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+sudo dnf install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms qt5-qtx11extras libxkbcommon
+sudo dnf install VirtualBox-6.1
+```
+
+## Install Windows fonts
+
+```
+sudo dnf install -y dnf install -y curl cabextract xorg-x11-font-utils fontconfig
+# download and install the rpm package from https://downloads.sourceforge.net/project/mscorefonts2/rpms
 ```
