@@ -146,3 +146,17 @@ sudo dnf install VirtualBox-6.1
 sudo dnf install -y dnf install -y curl cabextract xorg-x11-font-utils fontconfig
 # download and install the rpm package from https://downloads.sourceforge.net/project/mscorefonts2/rpms
 ```
+
+## Enable swapfile
+
+Save as *.sh file, and run with sudo
+
+```
+#!/bin/bash
+dd if=/dev/zero of=/swapfile bs=1024 count=$((1024 * 1024 * 4))
+chown root:root /swapfile
+chmod 0600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo "/swapfile none swap sw 0 0" >> /etc/fstab
+```
