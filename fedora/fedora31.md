@@ -17,8 +17,11 @@ sudo dnf autoremove -y sylpheed # not needed
 ## Custom Repositories
 
 ```
-# RPMFusion
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# RPM Fusion
+sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# RPM Sphere, make sure to install RPM Fusion first
+sudo dnf install -y https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-30-1.noarch.rpm
 ```
 
 ## Install ZSH, Oh-my-zsh, Powerlevel10k theme
@@ -92,6 +95,7 @@ sudo dnf install -y gnome-screenshot # screenshot manager
 sudo dnf install -y telegram-desktop # telegram messanger
 sudo dnf install -y redshift-gtk # comfort screen color during night
 sudo dnf install -y gvfs-smb # smb client for pcmanfm
+sudo dnf install -y bookworm # Simple e-book reader, make sure to install rpmsphere repo first
 ```
 
 ## Install VScodium
