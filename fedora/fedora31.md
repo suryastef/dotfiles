@@ -96,6 +96,9 @@ sudo dnf install -y telegram-desktop # telegram messanger
 sudo dnf install -y redshift-gtk # comfort screen color during night
 sudo dnf install -y gvfs-smb # smb client for pcmanfm
 sudo dnf install -y bookworm # Simple e-book reader, make sure to install rpmsphere repo first
+sudo dnf install -y nethogs # network interface monitoring
+sudo dnf install -y nmap # network port scanner
+sudo dnf install -y aircrack-ng # Wireless network pentest tool
 ```
 
 ## Install VScodium
