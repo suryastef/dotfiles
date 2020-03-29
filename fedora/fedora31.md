@@ -68,7 +68,7 @@ ln -sf /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manag
 mv /usr/share/xsessions/openbox.desktop ~/
 ```
 
-## Install Container Engine (Podman)
+## Install Podman
 
 Fedora 31 uses cgroup v2 which is not supported by docker
 
@@ -76,10 +76,20 @@ Fedora 31 uses cgroup v2 which is not supported by docker
 sudo dnf install -y podman
 ```
 
+## Install Docker (instead of Podman)
+
+```
+curl https://get.docker.com | sh
+sed -i "s/GRUB_CMDLINE_LINUX=\"\(.*\)\"/GRUB_CMDLINE_LINUX=\"\1 systemd.unified_cgroup_hierarchy=0\"/" /etc/default/grub
+sudo grub2-mkconfig -o $(sudo find /boot -name grub.cfg -print -quit) # Make sure no disk drive with another OS installed
+sudo usermod -aG docker $USER
+```
+
 ## Install Various App
 
 ```
 sudo dnf install -y terminator # another terminal emulator
+sudo dnf install -y chromium-freeworld (from RPMFusion-free repo)
 sudo dnf install -y remmina # best remote desktop client
 sudo dnf install -y compton # enable transparancy
 sudo dnf install -y vim # terminal text editor
@@ -92,7 +102,7 @@ sudo dnf install -y pinta # MS. Paint like picture editor
 sudo dnf install -y lxhotkey # hotkey manager
 sudo dnf install -y blueman # bluetooth manager
 sudo dnf install -y gnome-screenshot # screenshot manager
-sudo dnf install -y telegram-desktop # telegram messanger
+sudo dnf install -y telegram-desktop # telegram messanger (from RPMFusion-free repo)
 sudo dnf install -y redshift-gtk # comfort screen color during night
 sudo dnf install -y gvfs-smb # smb client for pcmanfm
 sudo dnf install -y bookworm # Simple e-book reader, make sure to install rpmsphere repo first
@@ -117,14 +127,6 @@ gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
 EOF
 
 sudo dnf install -y codium
-```
-
-## Install Chromium
-
-Make sure RPMFusion repositories (free and non-free) are installed
-
-```
-sudo dnf install -y chromium-freeworld
 ```
 
 ## Install PlayonLinux
