@@ -68,23 +68,6 @@ ln -sf /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manag
 mv /usr/share/xsessions/openbox.desktop ~/
 ```
 
-## Install Podman
-
-Fedora 31 uses cgroup v2 which is not supported by docker
-
-```
-sudo dnf install -y podman
-```
-
-## Install Docker (instead of Podman)
-
-```
-curl https://get.docker.com | sh
-sed -i "s/GRUB_CMDLINE_LINUX=\"\(.*\)\"/GRUB_CMDLINE_LINUX=\"\1 systemd.unified_cgroup_hierarchy=0\"/" /etc/default/grub
-sudo grub2-mkconfig -o $(sudo find /boot -name grub.cfg -print -quit) # Make sure no disk drive with another OS installed
-sudo usermod -aG docker $USER
-```
-
 ## Install Various App
 
 ```
@@ -150,6 +133,40 @@ sudo dnf install VirtualBox-6.1
 ```
 sudo dnf install -y dnf install -y curl cabextract xorg-x11-font-utils fontconfig
 # download and install the rpm package from https://downloads.sourceforge.net/project/mscorefonts2/rpms
+```
+
+## Install Podman
+
+Fedora 31 uses cgroup v2 which is not supported by docker
+
+```
+sudo dnf install -y podman
+```
+
+## Install Docker (instead of Podman)
+
+```
+curl https://get.docker.com | sh
+sudo usermod -aG docker $USER
+sudo sed -i "s/GRUB_CMDLINE_LINUX=\"\(.*\)\"/GRUB_CMDLINE_LINUX=\"\1 systemd.unified_cgroup_hierarchy=0\"/" /etc/default/grub
+sudo grub2-mkconfig -o $(sudo find /boot -name grub.cfg -print -quit) # Make sure no disk drive with another OS attached
+sudo reboot
+```
+
+## Change default network interface name to clasic
+
+```
+sudo sed -i "s/GRUB_CMDLINE_LINUX=\"\(.*\)\"/GRUB_CMDLINE_LINUX=\"\1 net.ifnames=0 biosdevname=0\"/" /etc/default/grub
+sudo grub2-mkconfig -o $(sudo find /boot -name grub.cfg -print -quit) # Make 
+sudo reboot
+```
+
+## Change boot timeout to 1 second
+
+```
+sudo sed -i 's/^\(GRUB_TIMEOUT=\)[0-9]\+$/\11/' /etc/default/grub
+sudo grub2-mkconfig -o $(sudo find /boot -name grub.cfg -print -quit) # Make 
+sudo reboot
 ```
 
 ## Enable swapfile
