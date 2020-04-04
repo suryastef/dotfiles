@@ -85,6 +85,7 @@ sudo dnf install -y pinta # MS. Paint like picture editor
 sudo dnf install -y lxhotkey # hotkey manager
 sudo dnf install -y blueman # bluetooth manager
 sudo dnf install -y gnome-screenshot # screenshot manager
+sudo dnf install -y file-roller
 sudo dnf install -y telegram-desktop # telegram messanger (from RPMFusion-free repo)
 sudo dnf install -y redshift-gtk # comfort screen color during night
 sudo dnf install -y gvfs-smb # smb client for pcmanfm
