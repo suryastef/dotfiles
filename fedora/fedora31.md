@@ -22,6 +22,10 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 
 # RPM Sphere, make sure to install RPM Fusion first
 sudo dnf install -y https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-30-1.noarch.rpm
+
+# Vivaldi Repo
+sudo dnf install -y dnf-utils
+sudo dnf config-manager --add-repo https://repo.vivaldi.com/archive/vivaldi-fedora.repo
 ```
 
 ## Install ZSH, Oh-my-zsh, Powerlevel10k theme
@@ -73,6 +77,7 @@ mv /usr/share/xsessions/openbox.desktop ~/
 ```
 sudo dnf install -y terminator # another terminal emulator
 sudo dnf install -y chromium-freeworld (from RPMFusion-free repo)
+sudo dnf install -y vivaldi-stable (from vivaldi repo)
 sudo dnf install -y remmina # best remote desktop client
 sudo dnf install -y compton # enable transparancy
 sudo dnf install -y vim # terminal text editor
