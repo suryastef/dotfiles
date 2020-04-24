@@ -76,8 +76,9 @@ mv /usr/share/xsessions/openbox.desktop ~/
 
 ```
 sudo dnf install -y terminator # another terminal emulator
-sudo dnf install -y chromium-freeworld (from RPMFusion-free repo)
-sudo dnf install -y vivaldi-stable (from vivaldi repo)
+sudo dnf install -y firefox # web browser from mozilla
+sudo dnf install -y chromium-freeworld # web browser from google (from RPMFusion-free repo)
+sudo dnf install -y vivaldi-stable # web browser based on chromium (from vivaldi repo)
 sudo dnf install -y remmina # best remote desktop client
 sudo dnf install -y compton # enable transparancy
 sudo dnf install -y vim # terminal text editor
@@ -90,7 +91,7 @@ sudo dnf install -y pinta # MS. Paint like picture editor
 sudo dnf install -y lxhotkey # hotkey manager
 sudo dnf install -y blueman # bluetooth manager
 sudo dnf install -y gnome-screenshot # screenshot manager
-sudo dnf install -y file-roller
+sudo dnf install -y file-roller # archive manager
 sudo dnf install -y telegram-desktop # telegram messanger (from RPMFusion-free repo)
 sudo dnf install -y redshift-gtk # comfort screen color during night
 sudo dnf install -y gvfs-smb # smb client for pcmanfm
