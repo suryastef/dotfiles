@@ -100,6 +100,7 @@ sudo dnf install -y evince # PDF reader
 sudo dnf install -y nethogs # network interface monitoring
 sudo dnf install -y nmap # network port scanner
 sudo dnf install -y aircrack-ng # Wireless network pentest tool
+sudo dnf install -y dcfldd # Improved dd, useful for forensics and security
 ```
 
 ## Install VScodium
