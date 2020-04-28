@@ -56,6 +56,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/th
 sed -i -e 's/robbyrussell/powerlevel10k\/powerlevel10k/g' ~/.zshrc
 echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
 
+# Install powerlevel10k recommended font
+sudo mkdir /usr/share/fonts/meslo-lgs-nf && cd /usr/share/fonts/meslo-lgs-nf && sudo wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20{Regular,Bold,Italic,Bold%20Italic}.ttf
+
 # set used plugins
 sed -i -e 's/(git)/(git kubectl gcloud aws python docker docker-compose ansible zsh-autosuggestions)/g' ~/.zshrc
 
