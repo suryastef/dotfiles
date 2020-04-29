@@ -109,6 +109,8 @@ sudo dnf install -y nethogs # network interface monitoring
 sudo dnf install -y nmap # network port scanner
 sudo dnf install -y aircrack-ng # Wireless network pentest tool
 sudo dnf install -y dcfldd # Improved dd, useful for forensics and security
+sudo dnf install -y lsd # Colorful ls
+sudo dnf install -y bat # Full feature less
 ```
 
 ## Install VScodium
