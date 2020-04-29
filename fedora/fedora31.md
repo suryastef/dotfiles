@@ -59,6 +59,11 @@ echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> ~/.zshrc
 # Install powerlevel10k recommended font
 sudo mkdir /usr/share/fonts/meslo-lgs-nf && cd /usr/share/fonts/meslo-lgs-nf && sudo wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20{Regular,Bold,Italic,Bold%20Italic}.ttf
 
+# Install Hack NF font, need bsdtar package
+sudo mkdir /usr/share/fonts/hack-nf
+wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/download/v$(curl -sSL https://github.com/ryanoasis/nerd-fonts/releases | sed -n '/Latest release<\/a>/,$p' | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1 | cut -c2-)/Hack.zip | sudo bsdtar -xvf- -C /usr/share/fonts/hack-nf
+sudo fc-cache -v
+
 # set used plugins
 sed -i -e 's/(git)/(git kubectl gcloud aws python docker docker-compose ansible zsh-autosuggestions)/g' ~/.zshrc
 
