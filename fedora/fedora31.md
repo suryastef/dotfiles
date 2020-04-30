@@ -113,6 +113,13 @@ sudo dnf install -y lsd # Colorful ls
 sudo dnf install -y bat # Full feature less
 ```
 
+## Install Alacritty
+
+```
+dnf copr enable pschyska/alacritty
+dnf install alacritty
+```
+
 ## Install VScodium
 
 ```
