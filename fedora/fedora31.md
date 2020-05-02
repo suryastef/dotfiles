@@ -120,6 +120,21 @@ dnf copr enable pschyska/alacritty
 dnf install alacritty
 ```
 
+## Install VIM air-line
+
+```
+git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
+
+```
+
+Then run these command inside vim to generate help tags
+
+```
+:helptags ~/.vim/pack/dist/start/vim-airline/doc
+:helptags ~/.vim/pack/dist/start/vim-airline-themes/doc
+```
+
 ## Install VScodium
 
 ```
