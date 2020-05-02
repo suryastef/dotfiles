@@ -126,6 +126,8 @@ dnf install alacritty
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
 
+# Install vim plugin for git
+git clone https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive
 ```
 
 Then run these command inside vim to generate help tags
