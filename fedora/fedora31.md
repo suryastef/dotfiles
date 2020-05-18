@@ -113,6 +113,7 @@ sudo dnf install -y lsd # Colorful ls
 sudo dnf install -y bat # Full feature less
 sudo dnf install -y tmux # Terminal multiplexer
 sudo dnf install -y paprefs # PulseAudio Preferences
+sudo dnf install -y NetworkManager-l2tp-gnome.x86_64 # VPN GUI configuration
 ```
 
 ## Install Alacritty
