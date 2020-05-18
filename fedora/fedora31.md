@@ -76,8 +76,8 @@ p10k configure
 
 ```
 sudo dnf install -y lightdm numlockx slick-greeter lightdm-gtk-greeter-settings
-ln -sf /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
-mv /usr/share/xsessions/openbox.desktop ~/
+sudo ln -sf /usr/lib/systemd/system/lightdm.service /etc/systemd/system/display-manager.service
+sudo mv /usr/share/xsessions/openbox.desktop ~/
 ```
 
 ## Install Various App
