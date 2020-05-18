@@ -6,5 +6,6 @@
 	autocrlf = input
 [alias]
 	lga = log --graph --oneline --all --decorate
-        initcom = "! git init && git add . && git commit -m 'Initial commit'"
-        addcom = "! git add . && git commit -m"
+  initcom = ! git init && git add --all && git commit -m 'Initial commit'
+  addcom = ! git add --all && git commit -m
+  pullsh = ! git pull && git push -u origin master
