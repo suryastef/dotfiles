@@ -116,6 +116,7 @@ sudo dnf install -y tmux # Terminal multiplexer
 sudo dnf install -y paprefs # PulseAudio Preferences
 sudo dnf install -y NetworkManager-l2tp-gnome.x86_64 # VPN GUI configuration
 sudo dnf install -y vlc # Media player
+sudo dnf install -y android-tools # fastboot & adb
 ```
 
 ## Install Alacritty
