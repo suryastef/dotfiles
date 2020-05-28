@@ -19,7 +19,6 @@ cursor:
   style: Beam
 key_bindings:
  - { key: V,        mods: Control|Shift, action: Paste            }
- - { key: V,        mods: Control,       action: PasteSelection   }
  - { key: Insert,   mods: Shift,         action: PasteSelection   }
  - { key: C,        mods: Control|Shift, action: Copy             }
  - { key: Key0,     mods: Control,       action: ResetFontSize    }
