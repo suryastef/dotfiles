@@ -90,6 +90,7 @@ sudo dnf install -y vivaldi-stable # web browser based on chromium (from vivaldi
 sudo dnf install -y remmina # best remote desktop client
 sudo dnf install -y compton # enable transparancy
 sudo dnf install -y vim # terminal text editor
+sudo dnf install -y mosh # ssh alternative, make sure open port 60000-61000/udp
 sudo dnf install -y persepolis # download manager
 sudo dnf install -y ghostwriter # markdown editor
 sudo dnf install -y pluma # text editor
