@@ -65,7 +65,7 @@ wget -qO- https://github.com/ryanoasis/nerd-fonts/releases/download/v$(curl -sSL
 sudo fc-cache -v
 
 # set used plugins
-sed -i -e 's/(git)/(git kubectl gcloud aws python docker docker-compose ansible zsh-autosuggestions zsh-interactive-cd)/g' ~/.zshrc
+sed -i -e 's/(git)/(git kubectl gcloud aws python docker docker-compose ansible zsh-autosuggestions zsh-interactive-cd tmux firewalld mosh nmap dnf sudo systemd adb pip zsh_reload)/g' ~/.zshrc
 
 sudo dnf install -y powerline-fonts
 
