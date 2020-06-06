@@ -232,3 +232,22 @@ mkswap /swapfile
 swapon /swapfile
 echo "/swapfile none swap sw 0 0" >> /etc/fstab
 ```
+
+## Enable Touchpad click
+
+Create:
+
+```
+/etc/X11/xorg.conf.d/30-touchpad.conf  
+```
+
+Content:
+
+```
+Section "InputClass"   
+  Identifier "touchpad"  
+  Driver "libinput"  
+  MatchIsTouchpad "on"  
+  Option "Tapping" "on"  
+EndSection
+```
