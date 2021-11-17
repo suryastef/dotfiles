@@ -1,9 +1,9 @@
 [user]
-	email = suryastef@gmail.com
-	name = Surya Stefanus
+  email = suryastef@gmail.com
+  name = Surya Stefanus
 [core]
-	editor = vim
-	autocrlf = input
+  editor = vim
+  autocrlf = input
 [alias]
   lga = log --graph --oneline --all --decorate
   initcom = ! git init && git add --all && git commit -m 'Initial commit'
