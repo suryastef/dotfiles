@@ -45,10 +45,10 @@ mkcd() {
 EOF
 
 # Install plugin zsh-autosuggestion
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install syntax highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 echo "source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 # Install powerlevel10k theme
@@ -130,11 +130,11 @@ dnf install alacritty
 ## Install VIM air-line
 
 ```
-git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
-git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
+git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+git clone --depth=1 https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
 
 # Install vim plugin for git
-git clone https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive
+git clone --depth=1 https://tpope.io/vim/fugitive.git ~/.vim/pack/tpope/start/fugitive
 ```
 
 Then run these command inside vim to generate help tags
