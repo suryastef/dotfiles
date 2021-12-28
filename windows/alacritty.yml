@@ -1,8 +1,11 @@
 shell:
-    program: pwsh
-working_directory: C:/Users/suryastef/
+    program: wsl -d ubuntu # pwsh
+working_directory: \\wsl$\Ubuntu\home\suryastef # C:\Users\092699\
 font:
-  size: 10
+  normal:
+    family: MesloLGS NF
+    style: Regular
+  size: 8
 background_opacity: 0.85
 window:
   startup_mode: Maximized
