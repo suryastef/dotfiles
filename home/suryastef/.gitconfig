@@ -8,4 +8,5 @@
   lga = log --graph --oneline --all --decorate
   initcom = ! git init && git add --all && git commit -m 'Initial commit'
   addcom = ! git add --all && git commit -m
+  pladdcom = ! git pull && git add --all && git commit -m
   pullsh = ! git pull && git push -u origin master
