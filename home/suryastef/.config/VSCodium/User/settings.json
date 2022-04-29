@@ -1,15 +1,18 @@
 {
-    "explorer.confirmDelete": true,
-    "terminal.integrated.shell.linux": "/bin/zsh",
-    "terminal.integrated.fontFamily": "Hack NF",
+    "explorer.confirmDelete": false,
     "terminal.integrated.fontSize": 11,
     "terminal.integrated.lineHeight":1,
     "editor.tabSize": 2,
     "editor.fontSize": 13,
-    "editor.fontFamily": "Hack NF",
     "workbench.statusBar.visible": true,
     "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": true,
-    "window.menuBarVisibility": "default",
-    "window.titleBarStyle": "custom"
+    "window.menuBarVisibility": "classic",
+    "window.titleBarStyle": "custom",
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "redhat.telemetry.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "editor.fontLigatures": false
 }
